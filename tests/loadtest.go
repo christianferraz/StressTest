@@ -26,7 +26,7 @@ func RunLoadTest(url string, totalRequests int, concurrency int) LoadTestReport 
 	wg := sync.WaitGroup{}
 	requestsChan := make(chan struct{}, concurrency)
 
-	startTime := time.Now() // Adicionado para calcular o tempo total
+	startTime := time.Now()
 
 	for i := 0; i < totalRequests; i++ {
 		requestsChan <- struct{}{}
